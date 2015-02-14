@@ -28,7 +28,7 @@ void ofApp::update(){
         if (distY < 0) degree = vec1.angle(vec2);
         else degree = 360-vec1.angle(vec2);  */
     
-    //　上は、「三項演算子」と呼ばれ、数値代入においてifを使いたい場合に?と:で表記を簡略化できるもの。
+    // 上は、「三項演算子」と呼ばれ、数値代入においてifを使いたい場合に?と:で表記を簡略化できるもの。
     // 使いすぎると読みづらくなるので用法用量には気をつけて。
     
     circle_color = ofColor::fromHsb(degree*255/360, 255, 255);
@@ -50,11 +50,11 @@ void ofApp::draw(){
     
     ofLine(mouseX, 0, mouseX, ofGetHeight());
     ofLine(0, mouseY, ofGetWidth(), mouseY);
-    //マウスを中心に上下左右に出る線を描画した。
+    // マウスを中心に上下左右に出る線を描画した。
     
     ofSetLineWidth(2.0);
     ofLine(ofGetWidth()/2, ofGetHeight()/2, mouseX, mouseY);
-    //中心とマウスを結ぶ、円の半径を示す線を描画した。
+    // 中心とマウスを結ぶ、円の半径を示す線を描画した。
     
     ofDrawBitmapString(ofToString(degree), mouseX+10, mouseY-10);
     // ofDrawBitmapString(s,x,y) は最も簡単に文字を表示する方法。
